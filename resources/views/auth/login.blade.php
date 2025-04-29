@@ -129,7 +129,7 @@
                         <div class="title mt-3 mb-4 pt-1">Seja bem-vindo</div>
                         <div class="mb-2"><img src="{{config('app.cdn')}}/fr/imagens/logo2.png"></div>
 
-                        <form name="form_login" id="form_login" action="{{ route('login') }}" method="post" class="default needs-validation" novalidate>
+                        <form method="POST" action="{{ route('login') }}">
                             @csrf
                             <!-- Botao Drive --->
                             <div class="row">
