@@ -46,7 +46,7 @@ return [
         'mysql' => [
             'read' => [
                 'host' => [
-                    env('DB_HOST_READ'),
+                    env('DB_HOST'),
                 ],
             ],
             'write' => [

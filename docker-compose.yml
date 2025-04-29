@@ -22,8 +22,10 @@ services:
     networks:
       - sail
     depends_on:
-      - mysql
-  mysql:
+      opet-database:
+        condition: service_healthy
+  opet-database:
+    container_name: opet-database
     image: mysql:8.0.29
     ports:
       - '3356:3306'
@@ -37,7 +39,7 @@ services:
     volumes:
       - ./.docker/mysql:/docker-entrypoint-initdb.d
     healthcheck:
-      test: [ "CMD", "mysqladmin", "ping", "-psystem" ]
+      test: [ "CMD", "mysqladmin", "ping", "-pdb-root-dev" ]
       retries: 3
       timeout: 5s
     networks:
@@ -45,6 +47,3 @@ services:
 networks:
   sail:
     driver: bridge
-volumes:
-  sail-mysql:
-    driver: local

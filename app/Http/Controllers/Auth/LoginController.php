@@ -12,6 +12,7 @@ use App\Services\Fr\UsuarioService;
 use App\Rules\ReCaptcha;
 use App\Rules\LoginComInstituicaoAtiva;
 use App\Rules\LoginUsuarioAtivo;
+use Log;
 
 class LoginController extends Controller
 {
@@ -63,9 +64,10 @@ class LoginController extends Controller
     protected function validateLogin(Request $request)
     {
         $validacao = [
-            'email' => ['required', 'email', new LoginComInstituicaoAtiva, new LoginUsuarioAtivo],
+            'email' => 'required|email',
             'password' => 'required|min:6',
         ];
+        Log::info('Validando login', ['request' => $request->all()]);
         if (env('APP_ENV') != 'local') {
             $validacao['g-recaptcha-response'] = [new ReCaptcha];
         }
