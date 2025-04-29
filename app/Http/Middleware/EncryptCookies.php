@@ -1,3 +1,4 @@
+
 <?php
 
 namespace App\Http\Middleware;
@@ -14,4 +15,15 @@ class EncryptCookies extends Middleware
     protected $except = [
         //
     ];
+
+    /**
+     * Disable encryption for specific routes/cookies if needed
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return void
+     */
+    public function disable($request)
+    {
+        return parent::disable($request);
+    }
 }

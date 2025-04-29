@@ -19,6 +19,9 @@ return [
     */
 
     'driver' => env('SESSION_DRIVER', 'file'),
+    'expire_on_close' => false,
+    'encrypt' => true,
+    'lottery' => [2, 100],
 
     /*
     |--------------------------------------------------------------------------
