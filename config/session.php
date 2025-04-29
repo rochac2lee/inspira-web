@@ -18,7 +18,8 @@ return [
     |
     */
 
-    'driver' => env('SESSION_DRIVER', 'file'),
+    'driver' => env('SESSION_DRIVER', 'database'),
+    'same_site' => 'lax',
     'expire_on_close' => false,
     'encrypt' => true,
     'lottery' => [2, 100],

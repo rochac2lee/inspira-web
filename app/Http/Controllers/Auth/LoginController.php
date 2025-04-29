@@ -53,12 +53,7 @@ class LoginController extends Controller
     protected function authenticated(Request $request, $user)
     {
         $this->usuarioService->gravaSessaoUsuario();
-
-        if (auth()->user()->permissao == "A") {
-            return redirect('/catalogo');
-        } else {
-            return redirect('/catalogo');
-        }
+        return redirect()->intended('/catalogo');
     }
 
     protected function validateLogin(Request $request)
