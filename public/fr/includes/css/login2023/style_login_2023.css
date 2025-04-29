@@ -1,0 +1,324 @@
+/* Novo Layout 2021 */
+.btn-new{
+  border-radius: 0.30rem;
+  font-size: 18px;
+  padding: 0.2rem 2.5rem 0.1rem 2.5rem;
+  line-height: initial;
+}
+
+button:focus, a:focus, div:focus, input:focus{outline:0px dotted;outline:0px auto -webkit-focus-ring-color}
+
+.cadastro.filtro .area-interna{
+	width: 1000px;
+	position: relative;
+}
+
+.cadastro.filtro .user{
+	position: absolute;
+	right: 0;
+	margin-top: -10%;
+}
+
+.cadastro.filtro h1{
+	margin-top: 16%;
+	margin-bottom: 3.5em;
+	font-size: 17px;
+	text-align: center;
+}
+
+.cadastro.filtro .itens {
+	overflow: hidden;
+}
+
+.cadastro.filtro .itens .item .banner {
+	width: 277px;
+	margin-left: auto!important;
+	margin-right: auto!important;
+}
+
+.cadastro.filtro .itens .item {
+    text-align: center;
+    font-size: 14px;
+    color: #868685;
+}
+
+.cadastro.filtro .itens .item .borda{
+    width: 100%;
+    line-height: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 277px 60px 0px;
+    margin-bottom: -1px;
+}
+.cadastro.filtro .itens .item .titulo{
+	color: #ffffff;
+	font-size: 25px;
+	height: 66px;
+	padding-top: 10px;
+}
+.cadastro.filtro .itens .item .user-desc{
+	background-color: #ffffff;
+	font-size: 18px;
+	color: #1e2346;
+	font-weight: 600;
+	height: 340px;
+}
+
+
+.cadastro.filtro .itens .item.bg-1 .titulo{ background-color: #2d5772; }
+.cadastro.filtro .itens .item.bg-1 .borda{ border-color: #f00 transparent #2d5772 transparent;  }
+.cadastro.filtro .itens .item.bg-1 .btn { background-color: #2d5772; border-color: #2d5772; color: #ffffff !important; }
+
+.cadastro.filtro .itens .item.bg-2 .titulo{ background-color: #ffa501; }
+.cadastro.filtro .itens .item.bg-2 .borda{ border-color: #f00 transparent #ffa501 transparent;  }
+.cadastro.filtro .itens .item.bg-2 .btn { background-color: #ffa501; border-color: #ffa501; color: #ffffff !important; }
+
+.cadastro.filtro .itens .item.bg-3 .titulo{ background-color: #9f3642; }
+.cadastro.filtro .itens .item.bg-3 .borda{ border-color: #f00 transparent #9f3642 transparent;  }
+.cadastro.filtro .itens .item.bg-3 .btn { background-color: #9f3642; border-color: #9f3642; color: #ffffff !important; }
+
+.cadastro.filtro .itens .item.bg-4 .titulo{ background-color: #eb5a24; }
+.cadastro.filtro .itens .item.bg-4 .borda{ border-color: #f00 transparent #eb5a24 transparent;  }
+.cadastro.filtro .itens .item.bg-4 .btn { background-color: #eb5a24; border-color: #eb5a24; color: #ffffff !important; }
+
+.cadastro.filtro .itens .item.bg-5 .titulo{ background-color: #2d724b; }
+.cadastro.filtro .itens .item.bg-5 .borda{ border-color: #f00 transparent #2d724b transparent;  }
+.cadastro.filtro .itens .item.bg-5 .btn { background-color: #2d724b; border-color: #2d724b; color: #ffffff !important; }
+
+
+.slick-arrow {
+  font-family: "Font Awesome 5 Free";
+  font-size: 0;
+  color: #f8ad15;
+  border: none;
+  background: none;
+  top: 45%;
+  position: absolute;
+  z-index: 50;
+  text-indent: -999em;
+  line-height: normal;
+  outline: 0;
+  opacity: 1;
+}
+
+.cadastro.filtro .slick-prev { left: -12%; }
+.cadastro.filtro .slick-next { right: -12%; }
+
+#banner .slick-prev { left: 1%; }
+#banner .slick-next { right: 1%; }
+
+.cadastro.filtro .slick-prev:before, #banner .slick-prev:before { content: "\f053"; font-weight: 600; font-size: 60px; }
+.cadastro.filtro .slick-next:before, #banner .slick-next:before { content: "\f054"; font-weight: 600; font-size: 60px; }
+
+
+/* Login Topo */
+.cadastro.login .topo{
+	padding-top: 3.5rem;
+	padding-right: 121px;
+}
+
+/*icones*/
+.cadastro.filtro .ico-groups {
+  background: url("../../imagens_2021/ico-groups.png") no-repeat left top;
+  width: 46px;
+  height: 45px;
+  float: left;
+  margin-right: 6px;
+  margin-left: 8px;
+  margin-top: 0px;
+}
+
+.cadastro.filtro .ico-groups.i1 { background-position-x: 0px;}
+.cadastro.filtro .ico-groups.i2 { background-position-x: -46px;}
+.cadastro.filtro .ico-groups.i3 { background-position-x: -92px;}
+.cadastro.filtro .ico-groups.i4 { background-position-x: -138px;}
+.cadastro.filtro .ico-groups.i5 { background-position-x: -184px;}
+
+/* Login */
+.cadastro.login.fundo{
+	background: url(../../imagens_2021/deskFundoPrincipal-1.png) right top no-repeat; background-size: cover;
+}
+.cadastro.login section.formulario{
+	margin-top: 2.3em;
+}
+.cadastro.login .form-control.ico{
+	width: 200px;
+}
+.cadastro.login .row.mr-45 {
+	width: 295px;
+}
+.cadastro.login .ml-45{
+	margin-left: 45%;
+}
+
+.cadastro.login .line-separator {
+    background-color: #ccc;
+    flex-grow: 5;
+    height: 1px;
+    margin: 0 5px 0 4px;
+}
+.cadastro.login .or-label {
+    flex-grow: 1;
+    text-align: center;
+}
+
+/* Novo Botao Login Google  */
+.login-google-button {
+    display: inline-block;
+    background: white;
+    color: #444;
+    border-radius: 7px;
+    border: thin solid #888;
+    /*box-shadow: 1px 1px 1px grey;*/
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.login-google-button .login-google-icon {
+  /*background: url('../../imagens_2021/ico_google_login.png') transparent 5px 50% no-repeat;*/
+  display: inline-block;
+  vertical-align: middle;
+  width: 42px;
+  height: 42px;
+  padding-top: 2px;
+  padding-left: 5px;
+}
+
+.login-google-button .login-google-text{
+	display: inline-block;
+    vertical-align: middle;
+    padding-left: 15px;
+    padding-right: 26px;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.cadastro.filtro .ico-groups {
+    background: url('../../imagens/ico-groups-form2.png') left top no-repeat;
+}
+
+/* Botão google */
+.jfk-button {
+    border-radius: 2px;
+    cursor: default;
+    font-size: 11px;
+    text-align: center;
+    white-space: nowrap;
+    line-height: 27px;
+    min-width: 54px;
+    outline: 0;
+    cursor: pointer;
+}
+
+.save-to-drive-button.jfk-button {
+    font-weight: normal;
+    color: #444;
+    border: 1px solid rgba(0,0,0,0.1);
+    height: 29px;
+    background-color: #ededed;
+    background-image: -webkit-linear-gradient(top,#f5f5f5,#e6e6e6);
+    background-image: -moz-linear-gradient(top,#f5f5f5,#e6e6e6);
+    background-image: -ms-linear-gradient(top,#f5f5f5,#e6e6e6);
+    background-image: -o-linear-gradient(top,#f5f5f5,#e6e6e6);
+    background-image: linear-gradient(top,#f5f5f5,#e6e6e6);
+    margin: 0;
+    padding: 0;
+    font-family: arial,sans-serif;
+}
+
+.save-to-drive-button:hover {
+    background-color: #e8e8e8;
+    background-image: -webkit-linear-gradient(top,#f0f0f0,#e1e1e1);
+    background-image: -moz-linear-gradient(top,#f0f0f0,#e1e1e1);
+    background-image: -ms-linear-gradient(top,#f0f0f0,#e1e1e1);
+    background-image: -o-linear-gradient(top,#f0f0f0,#e1e1e1);
+    background-image: linear-gradient(top,#f0f0f0,#e1e1e1);
+}
+.save-to-drive-image {
+    display: inline-block;
+    float: left;
+    margin-left: 3px;
+    margin-right: 5px;
+    margin-top: 5px;
+    position: relative;
+   	background-size: 21px 121px;
+    width: 16px;
+    height: 16px;
+}
+
+.save-to-drive-text {
+    display: inline-block;
+    margin-left: -3px;
+    margin-right: 6px;
+    position: relative;
+    vertical-align: bottom;
+}
+
+/** botao drive **/
+.drive-sprite-save-to-drive-drive {
+    background: no-repeat url(../../imagens/icones/ico_google_buttons.png) 0 0px;
+}
+
+/** botao compartilhar **/
+.drive-sprite-classroom {
+    background: no-repeat url(../../imagens/icones/ico_google_buttons.png) 0 -21px;
+}
+
+/** botao compartilhar **/
+.drive-sprite-link {
+    background: no-repeat url(../../imagens/icones/ico_google_buttons.png) 0 -42px;
+}
+
+
+@media (max-width: 940px) {
+	.not-mobile{
+		display: none;
+	}
+
+
+	/* Escolha de perfil */
+	.cadastro.filtro .area-interna{
+		width: 100%;
+		position: initial;
+	}
+	.cadastro.filtro .user {
+		position: initial;
+	}
+
+	.cadastro.filtro .slick-prev {
+		left: 0;
+	}
+
+	.cadastro.filtro .slick-next {
+	  right: 0;
+	}
+
+	/* Login Mobile */
+	.cadastro.login.fundo{
+		background: url(../../imagens_2021/deskFundoPrincipalMobile-1.png) center top no-repeat; background-size: cover;
+	}
+
+	/*icones*/
+	.cadastro.filtro .ico-groups {
+	  background: url("../../imagens_2021/ico-groups-mobile.png") no-repeat left top;
+	  width: 33px;
+	  height: 33px;
+	  float: left;
+	  margin-right: 8px;
+	  margin-left: 6px;
+	  margin-top: 0px;
+	}
+
+	.cadastro.login .topo{
+		padding-top: 1rem;
+    	padding-right: 0px;
+    	margin: 0 auto;
+    	width: 260px;
+	}
+
+	.cadastro.filtro .ico-groups.i1 { background-position-x: 0px;}
+	.cadastro.filtro .ico-groups.i2 { background-position-x: -33px;}
+	.cadastro.filtro .ico-groups.i3 { background-position-x: -66px;}
+	.cadastro.filtro .ico-groups.i4 { background-position-x: -99px;}
+	.cadastro.filtro .ico-groups.i5 { background-position-x: -132px;}
+}

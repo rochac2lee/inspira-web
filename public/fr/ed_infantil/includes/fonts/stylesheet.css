@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'Comfortaa';
+    src: url('Comfortaa-Regular.woff2') format('woff2'),
+        url('Comfortaa-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Baloo Bhaijaan';
+    src: url('BalooBhaijaan-Regular.woff2') format('woff2'),
+        url('BalooBhaijaan-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Minion Pro';
+    src: url('MinionPro-Regular.woff2') format('woff2'),
+        url('MinionPro-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+

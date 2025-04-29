@@ -1,0 +1,39 @@
+:root {
+    /* Variaveis para o sistema em geral */
+    --primary-color: #F7C026!important;
+    --secundary-color: #F7E726!important;
+
+    /* Cor font dos botões */
+    --btn-text-color: #000!important;
+    --btn-text-color-hover: #000!important;
+    
+    /* NavBar */
+    --nb-background-color: #202A36!important;
+    --nb-links: #F7C026!important;
+    --nb-links-hover: #F7E726!important;
+    /* SideBar */
+    --sb-links-color: #202A36!important;
+    /*background input type=range*/
+    --bk-input-range-color: #F7C026!important;
+    --bk-input-range-color-track: #F5E655!important;
+    /*Cor dos link */
+    --sb-background-color: #fff!important;
+    /* BG do siderbar */
+    --sb-links-hover: #F7E726!important;
+    /*Cor do link :hover*/
+    --sb-bglinks-hover: #F7E726!important;
+    /*--background div aula criada*/
+    --bk-div-aula-color: #F7C026!important;
+    /*BG do link :hover*/
+    --sb-bglinks-active: #F7E726!important;
+    /*BG do link :Ativo*/
+    --sb-links-color-hover-active: #202A36!important;
+    /*Cor do link :Ativo*/
+    /* Footer */
+    --ft-background-color: #fff!important;
+    --ft-color: #F7C026;
+    --ft-color-links: #F7E726!important;
+    /* hub */
+    --hub-primary-color: ##F7C026!important;
+    --hub-background-color: #c9c9c9!important;
+}

@@ -1,0 +1,68 @@
+.carousel
+{
+    border-radius: 10px !important;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+@media screen and (min-width: 570px)
+{
+    .carousel
+    {
+        /* max-width: 80%; */
+    }            
+}
+
+@media screen and (max-width: 570px)
+{
+    .container-fluid
+    {
+        padding: 0px;
+    }
+}         
+
+.carousel-inner
+{
+    border-radius: 10px !important;
+}
+
+.carousel-item .card.rounded
+{
+    /* max-width: 800px; */
+    height: 400px;
+    background-color: #343a40;
+    transition: background 0.1s ease-in-out;
+
+    border-radius: 10px !important;
+}
+
+.carousel-item.active .card.rounded
+{            
+    background-color: #9c9c9c;
+}
+
+.carousel-control-prev, .carousel-control-next
+{
+    justify-content: initial;
+}
+
+.carousel-control-next .carousel-control-holder
+{
+    border-radius: 190px 0px 0px 190px;
+}
+
+.carousel-control-prev .carousel-control-holder
+{
+    border-radius: 0px 190px 190px 0px;
+}        
+
+.carousel-control-holder
+{
+    padding: 15px 25px;
+    background:  white;            
+}
+
+.carousel-control-holder > i
+{
+    color: #585858;
+    font-size: 20px;
+}

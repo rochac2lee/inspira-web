@@ -1,0 +1,220 @@
+{
+  "mercury": {
+    "planetTextureMapPath": "fr/sistemasolar/assets/planets/mercury/mercury_texture.jpg",
+    "planetBumpMapPath": "fr/sistemasolar/assets/planets/mercury/mercury_bump.jpg",
+    "configsByView": {
+      "speed": {
+        "radius": 1.22,
+        "rotationSpeed": 0.01,
+        "orbitRadius": 24,
+        "orbitTimeInSecond": 2.89016,
+        "inclination": -0.07
+      },
+      "size": {
+        "radius": 1.22,
+        "rotationSpeed": 0.01,
+        "orbitRadius": 24,
+        "orbitTimeInSecond": 2.89016,
+        "inclination": -0.07
+      },
+      "distance": {
+        "radius": 1.22,
+        "rotationSpeed": 0.01,
+        "orbitRadius": 24,
+        "orbitTimeInSecond": 2.89016,
+        "inclination": -0.07
+      }
+    }
+  },
+  "venus": {
+    "planetTextureMapPath": "fr/sistemasolar/assets/planets/venus/venus_texture.jpg",
+    "planetBumpMapPath": "fr/sistemasolar/assets/planets/venus/venus_bump.jpg",
+    "configsByView": {
+      "speed": {
+        "radius": 3.026,
+        "rotationSpeed": -0.006,
+        "orbitRadius": 33.5,
+        "orbitTimeInSecond": 7.382376,
+        "inclination": -0.15
+      },
+      "size": {
+        "radius": 3.026,
+        "rotationSpeed": -0.006,
+        "orbitRadius": 33.5,
+        "orbitTimeInSecond": 7.382376,
+        "inclination": -0.15
+      },
+      "distance": {
+        "radius": 3.026,
+        "rotationSpeed": -0.006,
+        "orbitRadius": 33.5,
+        "orbitTimeInSecond": 7.382376,
+        "inclination": -0.15
+      }
+    }
+  },
+  "earth": {
+    "planetTextureMapPath": "fr/sistemasolar/assets/planets/earth/earth_texture.jpg",
+    "planetBumpMapPath": "fr/sistemasolar/assets/planets/earth/earth_bump.jpg",
+    "moon": {
+      "moonTextureMapPath": "fr/sistemasolar/assets/planets/earth/moon_texture.png",
+      "moonBumpMapPath": "fr/sistemasolar/assets/planets/earth/moon_bump.png",
+      "radius": 0.9
+    },
+    "configsByView": {
+      "speed": {
+        "radius": 3.185,
+        "rotationSpeed": 0.014,
+        "orbitRadius": 46.5,
+        "orbitTimeInSecond": 12.0002,
+        "inclination": 0.2
+      },
+      "size": {
+        "radius": 3.185,
+        "rotationSpeed": 0.014,
+        "orbitRadius": 46.5,
+        "orbitTimeInSecond": 12.0002,
+        "inclination": 0.2
+      },
+      "distance": {
+        "radius": 3.185,
+        "rotationSpeed": 0.014,
+        "orbitRadius": 46.5,
+        "orbitTimeInSecond": 12.0002,
+        "inclination": 0.2
+      }
+    }
+  },
+  "mars": {
+    "planetTextureMapPath": "fr/sistemasolar/assets/planets/mars/mars_texture.jpg",
+    "planetBumpMapPath": "fr/sistemasolar/assets/planets/mars/mars_bump.jpg",
+    "configsByView": {
+      "speed": {
+        "radius": 1.695,
+        "rotationSpeed": 0.012,
+        "orbitRadius": 67,
+        "orbitTimeInSecond": 22.57017,
+        "inclination": 0.22
+      },
+      "size": {
+        "radius": 1.695,
+        "rotationSpeed": 0.012,
+        "orbitRadius": 67,
+        "orbitTimeInSecond": 22.57017,
+        "inclination": 0.22
+      },
+      "distance": {
+        "radius": 1.695,
+        "rotationSpeed": 0.012,
+        "orbitRadius": 67,
+        "orbitTimeInSecond": 22.57017,
+        "inclination": 0.22
+      }
+    }
+  },
+  "jupiter": {
+    "planetTextureMapPath": "fr/sistemasolar/assets/planets/jupiter/jupiter_texture.jpg",
+    "configsByView": {
+      "speed": {
+        "radius": 10,
+        "rotationSpeed": 0.018,
+        "orbitRadius": 96,
+        "orbitTimeInSecond": 142.35138,
+        "inclination": 0.05
+      },
+      "size": {
+        "radius": 10,
+        "rotationSpeed": 0.018,
+        "orbitRadius": 96,
+        "orbitTimeInSecond": 142.35138,
+        "inclination": 0.05
+      },
+      "distance": {
+        "radius": 10,
+        "rotationSpeed": 0.018,
+        "orbitRadius": 96,
+        "orbitTimeInSecond": 142.35138,
+        "inclination": 0.05
+      }
+    }
+  },
+  "saturn": {
+    "planetTextureMapPath": "fr/sistemasolar/assets/planets/saturn/saturn_texture.jpg",
+    "createRings": true,
+    "configsByView": {
+      "speed": {
+        "radius": 9.5,
+        "rotationSpeed": 0.017,
+        "orbitRadius": 136,
+        "orbitTimeInSecond": 353.36998,
+        "inclination": 0.24
+      },
+      "size": {
+        "radius": 9.5,
+        "rotationSpeed": 0.017,
+        "orbitRadius": 136,
+        "orbitTimeInSecond": 353.36998,
+        "inclination": 0.24
+      },
+      "distance": {
+        "radius": 9.5,
+        "rotationSpeed": 0.017,
+        "orbitRadius": 136,
+        "orbitTimeInSecond": 353.36998,
+        "inclination": 0.24
+      }
+    }
+  },
+  "uranus": {
+    "planetTextureMapPath": "fr/sistemasolar/assets/planets/uranus/uranus_texture.jpg",
+    "configsByView": {
+      "speed": {
+        "radius": 3.8,
+        "rotationSpeed":0.016,
+        "orbitRadius": 176,
+        "orbitTimeInSecond": 1008.20215,
+        "inclination": 0.5
+      },
+      "size": {
+        "radius": 3.8,
+        "rotationSpeed":0.016,
+        "orbitRadius": 176,
+        "orbitTimeInSecond": 1008.20215,
+        "inclination": 0.5
+      },
+      "distance": {
+        "radius": 3.8,
+        "rotationSpeed": 0.016,
+        "orbitRadius": 166,
+        "orbitTimeInSecond": 1008.20215,
+        "inclination": 0.5
+      }
+    }
+  },
+  "neptune": {
+    "planetTextureMapPath": "fr/sistemasolar/assets/planets/neptune/neptune_texture.jpg",
+    "configsByView": {
+      "speed": {
+        "radius": 3.5,
+        "rotationSpeed": 0.015,
+        "orbitRadius": 196,
+        "orbitTimeInSecond": 1977.49584,
+        "inclination": 0.28
+      },
+      "size": {
+        "radius": 3.5,
+        "rotationSpeed": 0.015,
+        "orbitRadius": 196,
+        "orbitTimeInSecond": 1977.49584,
+        "inclination": 0.28
+      },
+      "distance": {
+        "radius": 3.5,
+        "rotationSpeed": 0.015,
+        "orbitRadius": 196,
+        "orbitTimeInSecond": 1977.49584,
+        "inclination": 0.28
+      }
+    }
+  }
+}

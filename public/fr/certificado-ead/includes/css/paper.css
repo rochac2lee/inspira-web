@@ -1,0 +1,120 @@
+/* FONTES */
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Bold.woff2') format('woff2'),
+        url('../fonts/Roboto-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.woff2') format('woff2'),
+        url('../fonts/Roboto-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto_Serif';
+    src: url('../fonts/RobotoSerif-20ptItalic.woff2') format('woff2'),
+        url('../fonts/RobotoSerif-20ptItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+
+/* CONFIGURACAO GERAL */
+@page { margin: 0 }
+body { margin: 0; font-family: 'Roboto'; color: #050461; line-height: 1.2; font-size: 0.8rem; color: #000000;}
+#livro {width: fit-content; margin: 0 auto; transform-origin: center 0;}
+.pagina { margin: 0; overflow: hidden; position: relative; box-sizing: border-box; page-break-after: always; }
+
+/** Tamanho de Paginas **/
+body.A3 .pagina { width: 297mm; height: 419mm }
+body.A3.landscape .pagina{ width: 420mm; height: 296mm }
+body.A4 .pagina .pagina{ width: 210mm; height: 297mm }
+body.A4.landscape .pagina{ width: 297mm; height: 209mm }
+body.A5 .pagina .pagina{ width: 148mm; height: 209mm }
+body.A5.landscape .pagina{ width: 210mm; height: 147mm }
+
+/** Altura variável **/
+body.A3 .pagina.h-auto { width: 297mm; height: auto; }
+body.A4 .pagina.h-auto { width: 210mm; height: auto; }
+body.A5 .pagina.h-auto { width: 148mm; height: auto; }
+
+/** Padding area **/
+.pagina.padding-y-10mm { padding: 0 10mm }
+.pagina.padding-y-15mm { padding: 0 15mm }
+.pagina.padding-y-20mm { padding: 0 20mm }
+.pagina.padding-y-25mm { padding: 0 25mm }
+
+.pagina.padding-x-10mm { padding: 10mm 0 }
+.pagina.padding-x-15mm { padding: 15mm 0 }
+.pagina.padding-x-20mm { padding: 20mm 0 }
+.pagina.padding-x-25mm { padding: 25mm 0 }
+
+
+.pagina article {padding: 0 10mm; }
+
+
+/** Visualização Web **/
+@media screen {
+  body { background: #e0e0e0; }
+  .pagina { background: white; box-shadow: 0 .5mm 2mm rgba(0,0,0,.3); margin: 5mm 0; position: relative;}
+}
+
+/** Impressão **/
+@media print {
+  body.A3 { width: 297mm }
+  body.A4 { width: 210mm }
+  body.A5 { width: 148mm }
+
+  body.A4.landscape { width: 297mm }
+  body.A5.landscape { width: 210mm }
+
+  .pagina {-webkit-print-color-adjust: exact;}
+  .no-print {display: none;}
+}
+
+/* PAGINAS COM LAYOUT DIFERENCIADO */
+.pagina.p1 {background: url("../../imagens/pg1_fundo.jpg") white no-repeat; background-size: cover; -webkit-print-color-adjust: exact;}
+.pagina.p1 .tit1 {font-size: 0.9rem; text-align: center; padding: 68mm 0 0 0;}
+.pagina.p1 .titNome {font-size: 1.3rem; text-align: center; padding: 5.5mm 0 0 0; font-family: 'Roboto_Serif'; font-weight: bold;}
+.pagina.p1 .tit2 {font-size: 0.9rem; text-align: center; padding: 5.5mm 0 0 0;}
+.pagina.p1 .titCurso {font-size: 1.1rem; text-align: center; padding: 5.5mm 0 0 0; font-family: 'Roboto_Serif'; font-weight: bold;}
+.pagina.p1 .data {font-size: 0.9rem; text-align: center; padding: 17mm 0 0 0;}
+.pagina.p1 .validador {font-size: 0.9rem; text-align: center; padding: 11mm 0 0 0;}
+
+
+.pagina.p2 {background: url("../../imagens/pg2_fundo.jpg") white no-repeat; background-size: cover; -webkit-print-color-adjust: exact;}
+.pagina.p2 .desc {font-size: 0.9rem; text-align: center; padding: 62mm 0 0 0;}
+.pagina.p2 .desc strong {    font-family: 'Roboto_Serif'; font-weight: bold; font-size: 1rem; line-height: 1.5;}
+.pagina.p2 .desc2 {font-size: 0.9rem; text-align: left; padding: 8mm 0 0 0; width: 130mm; margin: 0 auto;}
+.pagina.p2 .qrcode {position: absolute; bottom: 0; margin: 0 0 21mm 11mm;}
+.pagina.p2 .qrcode p{font-size: 0.8rem; text-align: center; margin: 0; padding: 0;}
+
+
+
+/* Formatações */
+.text-center {text-align: center;}
+
+.text-color-white {color: #ffffff;}
+
+
+/*Botoes Flutuantes*/
+.btn_flutuante{position: fixed; right: 0; bottom: 0;}
+.btn_flutuante .btn_1{padding: 0px 7px 3px 0; cursor: pointer;}
+.btn_flutuante .btn_2{position: absolute; margin: -36px 0px 0px 20px; cursor: pointer;}
+.btn_flutuante .btn_3{position: absolute; margin: -29px 0px 0px -30px; cursor: pointer;}
+.btn_flutuante .btn_4{position: absolute; margin: 20px 0px 0px -37px; cursor: pointer;}
+
+
+/*MOBILE*/
+/*@media only screen and (max-width: 800px){
+  body {display: none;}
+  .no-mobile{ display: none; }
+}*/

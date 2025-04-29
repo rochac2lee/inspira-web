@@ -1,0 +1,748 @@
+body {
+    font-family: 'Catamaran', sans-serif;
+    background-color: rgb(29,30,33);    
+}
+
+.content{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    left: -3vw;
+    top: -1vw; 
+    width: 100%;
+}
+
+/*Menu*/
+
+.menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 15vw; /* Largura inicial do menu */
+    height: 100vh; /* Altura total da tela */
+    background-color: rgb(98, 101, 102);  
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* Estilize a barra de rolagem */
+.menu::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+.menu::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+}
+.menu::-webkit-scrollbar-thumb {
+    background: #e1e1e1;
+    border: 0px none #ffffff;
+    border-radius: 29px;
+}
+.menu::-webkit-scrollbar-thumb:hover {
+    background: #ffffff;
+}
+.menu::-webkit-scrollbar-thumb:active {
+    background: #000000;
+}
+.menu::-webkit-scrollbar-track {
+    background: #666666;
+    border: 0px none #ffffff;
+    border-radius: 27px;
+}
+.menu::-webkit-scrollbar-track:hover {
+    background: #666666;
+}
+.menu::-webkit-scrollbar-track:active {
+    background: #333333;
+}
+.menu::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
+
+.logo-opet{
+    position: relative;
+    width: 10vw;
+    top: 0.5vw;
+    left: 1.5vw;
+}
+
+.menu h4{
+    font-size: 1vw;
+    padding-left: 1vw;
+}
+
+.menu a {
+    padding-left: 1.5vw;
+    margin-right: 1vw;
+    text-decoration: none;
+    font-size: 0.8vw;
+    color: rgb(184, 186, 187);
+    display: block;
+}
+.menu span{
+    position: relative;
+    left: 1.5vw;
+}
+i{
+    position: relative;
+    top: 0.16vw;
+}
+
+#alkali-menu:hover{
+    color:rgb(197, 134, 45);
+}
+
+#hydrogen-menu:hover{
+    color:rgb(160,200,209);
+}
+
+#alkaline-menu:hover{
+    color:rgb(201, 168, 97);
+}
+
+#transition-metal-menu:hover{
+    color:rgb(214, 179, 206);
+}
+
+#boron-menu:hover{
+    color:rgb(20, 145, 128);
+}
+
+#carbon-menu:hover{
+    color:rgb(33, 34, 30);
+}
+
+#nitrogen-menu:hover{
+    color:rgb(67, 119, 128);
+}
+
+#calogens-menu:hover{
+    color:rgb(57, 137, 168);
+}
+
+#halogen-menu:hover{
+    color:rgb(204, 179, 82);
+}
+
+#noble-gases-menu:hover{
+    color:rgb(107, 79, 133);
+}
+
+#lanthanide-menu:hover{
+    color: rgb(161, 132, 97); 
+}
+
+#actinide-menu:hover{
+    color: rgb(206, 123, 159);
+}
+
+#metals-menu:hover{
+    color: rgb(14, 7, 96);
+}
+
+#nonmetals-menu:hover{
+    color: rgb(47, 179, 166);
+}
+
+#origin-elements-menu:hover{
+    color: rgb(43, 44, 46);
+}
+
+#tecnologi-elements-menu:hover{
+    color: rgb(43, 44, 46);
+}
+
+#table-what-for-menu:hover{
+    color: rgb(43, 44, 46);
+}
+
+.open-menu, .close-menu{
+    font-size: 2.5vw;
+}
+
+
+.close-menu{
+    position: absolute;
+    top: 1vw;
+    left: 18vw;
+    color: rgb(241, 241 , 241);
+    cursor: pointer;
+}
+
+.open-menu{
+    position: absolute;
+    top: 1vw;
+    left: 3vw;
+    color: rgb(241, 241 , 241);
+    cursor: pointer;
+}
+
+.bx-play, .bxs-movie-play{
+    font-size: 1vw;
+}
+
+/*Table*/
+
+.periodic-table{
+    position: relative;
+    left: 6vw;
+    transform: scale(0.8);
+}
+
+ol {
+    display: grid;
+    grid-template-columns: repeat(19, 3vw);
+    grid-template-rows: repeat(10, 3vw);
+    list-style: none;
+    grid-column-gap: 1.7vw;
+    grid-row-gap: 1.7vw; 
+}
+
+.element {
+    background-color: white;
+    width: 4.3vw;
+    height: 4.3vw;  
+    border-radius: 3px;  
+    cursor: pointer;  
+    text-align: center;
+}
+
+.element p{    
+    position: relative;
+    margin: 0;
+    padding: 0;
+        
+}
+.atomic{    
+    font-size: 1vw; 
+    left: -1.4vw;
+    top: -0.2vw;  
+}
+
+.symbol{    
+    font-size: 1.5vw;   
+    top: -1vw;   
+    left: -0.1vw  
+}
+
+.atom-name{    
+    font-size: 0.7vw;   
+    top: -1.6vw;   
+    left: -0.1vw  
+}
+
+.weight{    
+    font-size: 0.7vw;   
+    top: -2vw;   
+    left: -0.1vw  
+}
+
+.prevent{
+    pointer-events: none
+}
+
+li:first-child {
+    display: block;
+    grid-column-start: 2;
+}
+#helium {
+    grid-column-start: 19;
+}
+#boron, #aluminum {
+    grid-column-start: 14;
+}
+
+#lanthanide-start, #actinide-start {
+    grid-column-start: 4;
+}
+
+.groups-periods{       
+    float: left;  
+    position: relative;  
+    text-align: center; 
+    color: rgb(169, 191, 199);
+    font-size: 1.6vw;    
+    background-color: transparent;    
+    top: 0.6vw; 
+    left:0.5vw;   
+}
+
+.groups-periods:hover{ 
+    color: rgb(83, 128, 145);  
+    cursor: pointer;  
+}
+
+.no-hover{
+    pointer-events: none;
+}
+
+.periodic-table #hydrogen {
+    background: rgb(160,200,209);  
+}
+
+.periodic-table #hydrogen:hover {    
+    background: rgb(190,220,229);
+    margin: -0.25vw;
+    border: 0.25vw solid rgb(255, 255, 255);
+}
+
+.periodic-table .nonmetal, .halogen{
+    background: rgb(96, 136, 56);  
+}
+
+.periodic-table .nonmetal:hover, .halogen:hover{    
+    background: rgb(118, 155, 81);   
+    margin: -0.25vw;
+    border: 0.25vw solid rgb(255, 255, 255);
+}
+
+.periodic-table .noble-gas {
+    background: rgb(107, 79, 133);
+}
+
+.periodic-table .noble-gas:hover {    
+    background: rgb(133, 102, 161); 
+    margin: -0.25vw;
+    border: 0.25vw solid rgb(255, 255, 255);
+}
+
+.periodic-table .alkali {
+    background: rgb(197, 134, 45);
+}
+
+.periodic-table .alkali:hover {    
+    background: rgb(194, 143, 73);
+    margin: -0.25vw;
+    border: 0.25vw solid rgb(255, 255, 255);
+}
+
+.periodic-table .alkaline {
+    background: rgb(201, 168, 97);
+}
+
+.periodic-table .alkaline:hover {    
+    background: rgb(189, 167, 120);
+    margin: -0.25vw;
+    border: 0.25vw solid rgb(255, 255, 255);
+}
+
+.periodic-table .unknown {
+    background: rgb(156, 154, 146);
+}
+
+.periodic-table .unknown:hover {    
+    background: rgb(170, 169, 166);
+    margin: -0.25vw;
+    border: 0.25vw solid rgb(255, 255, 255);
+}
+
+.periodic-table .lanthanide {
+    background: rgb(161, 132, 97); 
+}
+
+.periodic-table .lanthanide:hover {    
+    background: rgb(184, 158, 127); 
+    margin: -0.25vw;
+    border: 0.25vw solid rgb(255, 255, 255);
+}
+
+.periodic-table .actinide {
+    background: rgb(206, 123, 159);
+}
+
+.periodic-table .actinide:hover {    
+    background: rgb(219, 149, 180);
+    margin: -0.25vw;
+    border: 0.25vw solid rgb(255, 255, 255);
+}
+
+.periodic-table .metalloid {
+    background: rgb(20, 145, 128); 
+}
+
+.periodic-table .metalloid:hover {    
+    background: rgb(44, 160, 144);
+    margin: -0.25vw;
+    border: 0.25vw solid rgb(255, 255, 255);
+}
+
+.periodic-table .post-transition-metals{
+    background: rgb(91, 194, 234);
+}
+
+.periodic-table .post-transition-metals:hover {    
+    background: rgb(129, 206, 236);
+    margin: -0.25vw;
+    border: 0.25vw solid rgb(255, 255, 255);
+}
+
+.periodic-table .transition-metal{
+    background: rgb(214, 179, 206);
+}
+
+.periodic-table .transition-metal:hover {    
+    background: rgb(228, 202, 222);
+    margin: -0.25vw;
+    border: 0.25vw solid rgb(255, 255, 255);
+}
+
+.periodic-table .halogen{
+    background-color: rgb(204, 179, 82);
+}
+
+.periodic-table .halogen:hover{
+    background-color: rgb(201, 179, 92);
+    margin: -0.25vw;
+    border: 0.25vw solid rgb(255, 255, 255);
+}
+
+.lanthanide{
+    font-size: 1vw;
+}
+
+.actinide{
+    font-size: 1vw;
+}
+
+/*Modal Elementos*/
+
+.modal-element {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(35, 35, 36, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.content-element {
+    width: 80%;
+    height: 90%;
+    background: rgb(6,6,6);
+    background: -moz-linear-gradient(90deg, rgba(6,6,6,0.9472163865546218) 0%, rgba(52,52,59,0.9023984593837535) 39%, rgba(68,79,82,0.804359243697479) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(6,6,6,0.9472163865546218) 0%, rgba(52,52,59,0.9023984593837535) 39%, rgba(68,79,82,0.804359243697479) 100%);
+    background: linear-gradient(90deg, rgba(6,6,6,0.9472163865546218) 0%, rgba(52,52,59,0.9023984593837535) 39%, rgba(68,79,82,0.804359243697479) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#060606",endColorstr="#444f52",GradientType=1);
+    padding: 1vw;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;   
+}
+
+.element-text {
+    position: absolute;
+    top: 50%;
+    left: 62%;     
+    transform: translate(-50%, -50%);
+    width: 45vw;
+    height: 90%;    
+    overflow: auto;
+    padding-left: 5vw;
+    scrollbar-color: gray;
+    scrollbar-width: thin;    
+    
+}
+
+.element-text p{
+    font-size: 1vw;
+}
+
+.element-text span{
+    font-size: 1vw;
+}
+
+/* Estilize a barra de rolagem */
+.element-text::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+.element-text::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+}
+.element-text::-webkit-scrollbar-thumb {
+    background: #e1e1e1;
+    border: 0px none #ffffff;
+    border-radius: 29px;
+}
+.element-text::-webkit-scrollbar-thumb:hover {
+    background: #ffffff;
+}
+.element-text::-webkit-scrollbar-thumb:active {
+    background: #000000;
+}
+.element-text::-webkit-scrollbar-track {
+    background: #666666;
+    border: 0px none #ffffff;
+    border-radius: 27px;
+}
+.element-text::-webkit-scrollbar-track:hover {
+    background: #666666;
+}
+.element-text::-webkit-scrollbar-track:active {
+    background: #333333;
+}
+.element-text::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
+.close-modal-element {
+    display: flex;
+    font-size: 1.3vw;
+    position: absolute;    
+    top: 1.5vw;
+    right: 9vw;
+    color: #fff;
+    cursor: pointer;
+    width: 1.5vw;
+    height: 1.5vw;
+    z-index: 999;
+}
+
+.element-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  
+.element-title {
+    font-size: 2vw;
+    color: rgb(169, 191, 199);
+    margin: 0;
+}
+  
+.element-info {
+    display: flex;
+    align-items: center;
+    margin-left: 1vw;
+}
+  
+.electrosphere-div {
+    margin-left: 1vw;
+}
+  
+.electrosphere-ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 1.1vw;
+    list-style-type: none;
+    color: rgb(169, 191, 199);
+    margin: 0;
+    padding: 0;
+}
+  
+  
+.electrons-li:not(:last-child) {
+    margin-right: 0.1vw; 
+}
+  
+.electrons-li i {
+    margin-left: 0.1vw; 
+}
+
+.atom-info{
+    display: inline-flexbox;
+    position: relative;
+    font-size: 0.9vw;
+    list-style-type: none;
+    left: -2vw;
+    width: 20vw;
+    color: rgb(166, 179, 178);
+    margin: 0;
+    padding-right: 1vw;
+    overflow: auto;
+}
+
+.atom-info span{
+    font-size: 1vw;
+    color: rgb(215, 224, 228);
+}
+
+/* Estilize a barra de rolagem */
+.atom-info::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+.atom-info::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+}
+.atom-info::-webkit-scrollbar-thumb {
+    background: #e1e1e1;
+    border: 0px none #ffffff;
+    border-radius: 29px;
+}
+.atom-info::-webkit-scrollbar-thumb:hover {
+    background: #ffffff;
+}
+.atom-info::-webkit-scrollbar-thumb:active {
+    background: #000000;
+}
+.atom-info::-webkit-scrollbar-track {
+    background: #666666;
+    border: 0px none #ffffff;
+    border-radius: 27px;
+}
+.atom-info::-webkit-scrollbar-track:hover {
+    background: #666666;
+}
+.atom-info::-webkit-scrollbar-track:active {
+    background: #333333;
+}
+.atom-info::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
+.atom{
+    position: relative;
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+    height: 2vw;
+    width: 30vw;
+    top: 0;
+    left: -5vw;
+    padding-top: 1vw;
+    margin-bottom: 1vw;
+}
+
+
+
+.proton{
+    position: absolute;    
+    border-radius: 50%;
+    background-color: rgb(99, 139, 153);
+    right: 14.5vw;    
+}
+
+.electrosphere{
+    display: flex;
+    align-items: center;
+    position: absolute;  
+    border-radius: 50%;    
+    border: 1px solid rgb(169, 191, 199);
+}
+.electron{    
+    border-radius: 50%;    
+    background-color:  rgb(169, 191, 199);
+    width: 0.5vw;
+    height: 0.5vw;
+}
+
+@keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}
+
+/*Modal Video*/
+
+.modal-audio {
+    position: fixed;
+    top: 26%;
+    left: 18%;
+    padding: 0.2vw;
+    width: 32vw;
+    height: 18vw;
+    background-color: rgb(12, 12, 12);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    display: none;
+}
+
+.close-modal-audio{    
+    position: absolute;
+    color: #fff;
+    font-size: 1.2vw;
+    top: -0.9vw;
+    left: -0.5vw;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+#player-audio {
+    width: 100%;
+    height: 100%;
+}
+
+#loading-icon-audio {    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 2vw;
+}
+
+.vp-controls-picture-in-picture {
+    display: none !important;
+}
+
+.modal-video{
+    position: fixed;
+    top: 0;
+    left: 0;    
+    width: 100%;
+    height: 100%;
+    background-color: rgb(35, 35, 36, 0.8);  
+    justify-content: center;
+    align-items: center;
+    display: none;
+    z-index: 9999;
+}
+
+.content-video{
+    top: 50%;
+    left: 50%;
+    padding: 0.2vw;
+    width: 45vw;
+    height: 26vw;
+    background-color: rgb(63, 63, 70);  
+    justify-content: center;
+    align-items: center;    
+}
+
+.close-modal-video{
+    position: relative;
+    color: #fff;
+    font-size: 1.2vw;
+    top: -1.2vw;
+    left: -0.8vw;
+    cursor: pointer;
+    z-index: 999;
+}
+
+#player-video{
+    position: relative;
+    top:-1.5vw;
+    width: 100%;
+    height: 100%;
+}
+
+#loading-icon-video{    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 2vw;
+}
+
+.mascot-inspira{
+    position: absolute;
+    width: 5vw;
+    bottom: -1vw;
+    right: -1vw;
+    transition: width 0.7s;
+}

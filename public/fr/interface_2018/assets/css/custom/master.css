@@ -1,0 +1,39 @@
+:root {
+    /* Variaveis para o sistema em geral */
+    --primary-color: #9446DB!important;
+    --secundary-color: #6646DB!important;
+    
+    /* Cor font dos botões */
+    --btn-text-color: #fff!important;
+    --btn-text-color-hover: #fff!important;    
+    
+    /* NavBar */
+    --nb-background-color: #1c2937!important;
+    --nb-links: #9446DB !important;
+    --nb-links-hover: #6646DB!important;
+    /* SideBar */
+    --sb-links-color: #9446DB!important;
+    /*background input type=range*/
+    --bk-input-range-color: #9446DB;
+    --bk-input-range-color-track: #6646DB;
+    /*Cor dos link */
+    --sb-background-color: #FFFFFF!important;
+    /* BG do siderbar */
+    --sb-links-hover: #6646DB!important;
+    /*Cor do link :hover*/
+    --sb-bglinks-hover: #6646DB!important;
+    /*--background div aula criada*/
+    --bk-div-aula-color: #6646DB;
+    /*BG do link :hover*/
+    --sb-bglinks-active: #6646DB!important;
+    /*BG do link :Ativo*/
+    --sb-links-color-hover-active: #6646DB!important;
+    /*Cor do link :Ativo*/
+    /* Footer */
+    --ft-background-color: #FFFFFF!important;
+    --ft-color: #9446DB!important;
+    --ft-color-links: #6646DB!important;
+    /* hub */
+    --hub-primary-color: #9446DB!important;
+    --hub-background-color: #c9c9c9!important;
+}

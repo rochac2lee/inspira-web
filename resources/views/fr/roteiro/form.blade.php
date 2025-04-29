@@ -1,0 +1,445 @@
+@extends('fr/master')
+@section('content')
+    <link rel="stylesheet" href="{{config('app.cdn')}}/fr/includes/froala_editor_v4/css/froala_editor.css">
+    <link rel="stylesheet" href="{{config('app.cdn')}}/fr/includes/froala_editor_v4/css/froala_style.css">
+    <link rel="stylesheet" href="{{config('app.cdn')}}/fr/includes/froala_editor_v4/css/plugins/code_view.css">
+    <link rel="stylesheet" href="{{config('app.cdn')}}/fr/includes/froala_editor_v4/css/plugins/draggable.css">
+    <link rel="stylesheet" href="{{config('app.cdn')}}/fr/includes/froala_editor_v4/css/plugins/colors.css">
+    <link rel="stylesheet" href="{{config('app.cdn')}}/fr/includes/froala_editor_v4/css/plugins/emoticons.css">
+    <link rel="stylesheet" href="{{config('app.cdn')}}/fr/includes/froala_editor_v4/css/plugins/line_breaker.css">
+    <link rel="stylesheet" href="{{config('app.cdn')}}/fr/includes/froala_editor_v4/css/plugins/table.css">
+    <link rel="stylesheet" href="{{config('app.cdn')}}/fr/includes/froala_editor_v4/css/plugins/char_counter.css">
+    <link rel="stylesheet" href="{{config('app.cdn')}}/fr/includes/froala_editor_v4/css/plugins/video.css">
+    <link rel="stylesheet" href="{{config('app.cdn')}}/fr/includes/froala_editor_v4/css/plugins/fullscreen.css">
+    <link rel="stylesheet" href="{{config('app.cdn')}}/fr/includes/froala_editor_v4/css/plugins/file.css">
+    <link rel="stylesheet" href="{{config('app.cdn')}}/fr/includes/froala_editor_v4/css/plugins/quick_insert.css">
+    <link rel="stylesheet" href="{{config('app.cdn')}}/fr/includes/froala_editor_v4/css/plugins/help.css">
+    <link rel="stylesheet" href="{{config('app.cdn')}}/fr/includes/froala_editor_v4/css/third_party/spell_checker.css">
+    <link rel="stylesheet" href="{{config('app.cdn')}}/fr/includes/froala_editor_v4/css/plugins/special_characters.css">
+    <link rel="stylesheet" href="{{config('app.cdn')}}/fr/includes/froala_editor_v4/css/codemirror.min.css">
+    <script type="text/javascript" src="{{config('app.cdn')}}/fr/includes/froala_editor_v4/js/codemirror.min.js"></script>
+    <script type="text/javascript" src="{{config('app.cdn')}}/fr/includes/froala_editor_v4/js/xml.min.js"></script>
+    <script type="text/javascript" src="{{config('app.cdn')}}/fr/includes/froala_editor_v4/js/purify.min.js"></script>
+
+    <script type="text/javascript" src="{{config('app.cdn')}}/fr/includes/froala_editor_v4/js/froala_editor.min.js"></script>
+    <script type="text/javascript" src="{{config('app.cdn')}}/fr/includes/froala_editor_v4/js/plugins/align.min.js"></script>
+    <script type="text/javascript" src="{{config('app.cdn')}}/fr/includes/froala_editor_v4/js/plugins/code_beautifier.min.js"></script>
+    <script type="text/javascript" src="{{config('app.cdn')}}/fr/includes/froala_editor_v4/js/plugins/code_view.min.js"></script>
+    <script type="text/javascript" src="{{config('app.cdn')}}/fr/includes/froala_editor_v4/js/plugins/colors.min.js"></script>
+    <script type="text/javascript" src="{{config('app.cdn')}}/fr/includes/froala_editor_v4/js/plugins/draggable.min.js"></script>
+    <script type="text/javascript" src="{{config('app.cdn')}}/fr/includes/froala_editor_v4/js/plugins/font_size.min.js"></script>
+    <script type="text/javascript" src="{{config('app.cdn')}}/fr/includes/froala_editor_v4/js/plugins/font_family.min.js"></script>
+    <script type="text/javascript" src="{{config('app.cdn')}}/fr/includes/froala_editor_v4/js/plugins/line_breaker.min.js"></script>
+    <script type="text/javascript" src="{{config('app.cdn')}}/fr/includes/froala_editor_v4/js/plugins/inline_style.min.js"></script>
+    <script type="text/javascript" src="{{config('app.cdn')}}/fr/includes/froala_editor_v4/js/plugins/lists.min.js"></script>
+    <script type="text/javascript" src="{{config('app.cdn')}}/fr/includes/froala_editor_v4/js/plugins/paragraph_format.min.js"></script>
+    <script type="text/javascript" src="{{config('app.cdn')}}/fr/includes/froala_editor_v4/js/plugins/paragraph_style.min.js"></script>
+    <script type="text/javascript" src="{{config('app.cdn')}}/fr/includes/froala_editor_v4/js/plugins/word_paste.min.js"></script>
+    <script type="text/javascript" src='{{config('app.cdn')}}/fr/includes/froala_editor_v4/js/languages/pt_br.js'></script>
+    <script type="text/javascript" src="{{config('app.cdn')}}/fr/includes/froala_editor_v4/js/plugins/special_characters.min.js"></script>    <!--  FIM Froala Editor  -->
+
+    <!-- Codigo para adicionar a matemática-->
+    <script type="text/javascript" src="{{url('/fr/includes/froala_editor_v4/node_modules/wiris/mathtype-froala3/wiris.js')}}"></script>
+
+    <!-- Codigo para mostrar o resultado --->
+    <script type="text/javascript" src="{{url('/fr/includes/froala_editor_v4/js/plugins/froala_wiris/integration/WIRISplugins.js?viewer=image')}}"></script>
+
+    <section class="section section-interna">
+        <div class="container" >
+            <form action="" method="post" enctype="multipart/form-data">
+                @csrf
+                <input type="hidden" name="id" value="{{old('id',@$dados->id)}}">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3 class="title-page">
+                            <a  href="{{url('/gestao/roteiros/')}}" class="btn btn-secondary">
+                                <i class="fas fa-arrow-left"></i>
+                            </a>
+                            @if ( strpos(Request::path(),'editar')===false )Novo roteiro @else Editar roteiro @endif
+                        </h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label  for="">* Título</label>
+                        <div class="form-group">
+                            <input type="text" name="titulo" placeholder="" value="{{old('titulo',@$dados->titulo)}}" class="form-control rounded {{ $errors->has('titulo') ? 'is-invalid' : '' }}">
+                            <div class="invalid-feedback">{{ $errors->first('titulo') }}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="col-md-6">
+                        <label for="">* Capa</label>
+                        <div class="form-group">
+                            <div id="logoCadastro" class="form-group imagem-file-roteiro bg-secondary text-white rounded p-1 text-center">
+                                <input type="hidden" name="existeImg" id="existeImg" value="{{old('existeImg',@$dados->capa)}}">
+                                <img class="img-fluid" id="imgLogo" src="{{@$dados->url_capa}}" >
+                                <br>
+                                <a class="btn btn-secondary" onclick="excluirLogo()">Excluir Capa</a>
+                            </div>
+                            <div id="novaLogo" class="form-group imagem-file-roteiro bg-secondary text-white rounded p-1 text-center">
+                                <input type="file" accept="image/*" name="imagem" class="myCropper">
+                            </div>
+                            <div class="invalid-feedback @if($errors->first('imagem'))d-block @endif">{{ $errors->first('imagem') }}</div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="">Descrição</label>
+                            <textarea rows="6" name="descricao" id="froala" class="form-control rounded {{ $errors->has('descricao') ? 'is-invalid' : '' }}">{{old('descricao',@$dados->descricao)}}</textarea>
+                            <div class="invalid-feedback @if($errors->first('descricao'))d-block @endif">{{ $errors->first('descricao') }}</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>* Componente Curricular</label>
+                            <select name="disciplina_id" class="multipleComponente" style="border: 1px solid #ffb100; border-radius: 0.4rem;">
+                                <option value="">Selecione</option>
+                                @foreach($disciplinas as $d)
+                                    <option @if( $d->id == old('disciplina_id',@$dados->disciplina_id)) selected @endif value="{{$d->id}}">{{$d->titulo}}</option>
+                                @endforeach
+                            </select>
+                            <div class="invalid-feedback @if($errors->first('disciplina_id'))d-block @endif">{{ $errors->first('disciplina_id') }}</div>
+                        </div>
+                        <div class="form-group">
+                            <label>* Etapa / Ano</label>
+                            <select name="ciclo_etapa_id" class="multipleEtapa" style="border: 1px solid #ffb100; border-radius: 0.4rem;">
+                                <option value="">Selecione</option>
+                                @foreach($ciclo as $c)
+                                    <option @if( $c->ciclo_id.';'.$c->id == old('ciclo_etapa_id',@$dados->ciclo_id.';'.@$dados->cicloetapa_id)) selected @endif value="{{$c->ciclo_id.';'.$c->id}}">{{$c->ciclo}} - {{$c->ciclo_etapa}}</option>
+                                @endforeach
+                            </select>
+                            <div class="invalid-feedback @if($errors->first('ciclo_etapa_id'))d-block @endif">{{ $errors->first('ciclo_etapa_id') }}</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Palavras-chave</label>
+                            <textarea name="tag" class="form-control rounded {{ $errors->has('tag') ? 'is-invalid' : '' }}">{{old('tag',@$dados->tag)}}</textarea>
+                            <small class="form-text w-100 text-muted">
+                                As palavras-chave devem ser separadas por hífen " - ".
+                            </small>
+                            <div class="invalid-feedback @if($errors->first('tag'))d-block @endif">{{ $errors->first('tag') }}</div>
+                        </div>
+                        @if(auth()->user()->permissao == 'Z')
+                            <div class="form-group ">
+                                <div class="custom-control custom-switch">
+                                    <input name="permite_biblioteca" @if(old('permite_biblioteca', @$dados->permite_biblioteca) == 1) checked @endif value="1" type="checkbox" class="custom-control-input" id="permite_biblioteca" onchange="$('#adicionarBiblioteca').toggleClass('d-none')">
+                                    <label class="custom-control-label pt-1" for="permite_biblioteca">Adicionar na biblioteca</label>
+                                </div>
+                            </div>
+                            <span id="adicionarBiblioteca" @if(old('permite_biblioteca', @$dados->permite_biblioteca) != 1) class="d-none" @endif >
+
+                                <div class="form-group">
+                                    <label>Este roteiro será disponibilizada na biblioteca de: *</label>
+                                    <select class="form-control" name="tipo_permissao_biblioteca" id="tipo_permissao_biblioteca" onchange="mudaVisualizacaoBiblioteca(this); ">
+                                        <option @if(old('tipo_permissao_biblioteca', @$dados->tipo_permissao_biblioteca) == 1) selected @endif value="1"> Todas as instituições e escolas da rede </option>
+                                        <option @if(old('tipo_permissao_biblioteca', @$dados->tipo_permissao_biblioteca) == 2) selected @endif value="2"> Todas as instituições e escolas PÚBLICAS  </option>
+                                        <option @if(old('tipo_permissao_biblioteca', @$dados->tipo_permissao_biblioteca) == 3) selected @endif value="3"> Todas as instituições e escolas PRIVADAS </option>
+                                        <option @if(old('tipo_permissao_biblioteca', @$dados->tipo_permissao_biblioteca) == 4) selected @endif value="4">
+                                                Adicionar e selecionar instituições e escolas específicas
+                                        </option>
+                                    </select>
+                                    <div class="invalid-feedback">{{ $errors->first('tipo_permissao_biblioteca') }}</div>
+                                </div>
+                                <div class="form-group" id="btnEscolaTurmaBiblioteca">
+                                    <button type="button" class="btn btn-sm btn-success" onclick="tipoModal = 1; $('#formEscolasTrumas').modal('show'); "><i class="fas fa-plus"></i> Adicione instituições e escolas</button>
+                                </div>
+                                <h6 class="text-center">Instituições e escolas selecionadas *</h6>
+                                <div class="row mb-4">
+                                    <div class="col">
+                                        <ul id="listaPermissaoBiblioteca" class="list-style">
+
+                                        </ul>
+                                        <div class="invalid-feedback" style="display: block">{{ $errors->first('instituicaoBiblioteca') }}</div>
+                                    </div>
+                                </div>
+                            </span>
+                        @endif
+                        <button type="submit" class="btn btn-default mt-0 float-right ml-2">Salvar</button>
+                        <a href="{{url('/gestao/roteiros')}}" class="btn btn-secondary float-right">Cancelar</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="modal fade" id="formEscolasTrumas" tabindex="0" role="dialog" aria-labelledby="formEscolasTrumas" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><i class="fas fa-times-circle"></i></span>
+                    </button>
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="tituloForm">Seleção de Instituições e Escolas</h5>
+                    </div>
+                    <div class="modal-body pb-0">
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <div class="filter">
+                                    <form class="form-inline d-flex justify-content-end">
+                                        <div class="input-group ml-1">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">
+                                                    <i class="fas fa-search"></i>
+                                                </div>
+                                            </div>
+                                            <input type="text" id="buscaNome" value="" placeholder="Nome da instituição" class="form-control" />
+                                        </div>
+                                        <div class="input-group ml-1">
+                                            <input type="text" id="buscaEscola" value="" placeholder="Nome da escola" class="form-control" />
+                                        </div>
+                                        <div class="input-group ml-1">
+                                            <select id="buscaTipo" class="form-control">
+                                                <option value="-1">Tipo</option>
+                                                @foreach($tipoInstituicao as $t)
+                                                    <option value="{{$t->id}}">{{$t->titulo}}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                        <div class="input-group ml-1">
+                                            <button type="button" onclick="buscarEscolas('')" class="btn btn-secondary btn-sm">Localizar</button>
+                                        </div>
+                                        <div class="input-group ml-1">
+                                            <button type="button" onclick="$('#buscaNome').val(''); $('#buscaEscola').val(''); $('#buscaTipo').val('-1'); buscarEscolas(''); " class="btn btn-secondary btn-sm">Limpar Filtros</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-md-12" id="tabelaEscolasTurmas">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Finalizar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <form id="formDadosBiblioteca">
+            @if(old('instituicaoBiblioteca')!= '')
+                @foreach(old('instituicaoBiblioteca') as $e)
+                    <input type="hidden" name="instituicaoBiblioteca[]" value="{{$e}}">
+                    @if(old('escolaBiblioteca.'.$e) != '')
+                        @foreach(old('escolaBiblioteca.'.$e) as $t)
+                            <input type="hidden" name="escolaBiblioteca[{{$e}}][]" value="{{$t}}">
+                        @endforeach
+                    @else
+                        <input type="hidden" name="escolaBiblioteca[{{$e}}][]" value="0">
+                    @endif
+                @endforeach
+            @elseif( isset($dados->tipo_permissao_biblioteca) && $dados->tipo_permissao_biblioteca==4)
+                @foreach($dados->escolasBiblioteca as $t)
+                    <input type="hidden" name="instituicaoBiblioteca[]" value="{{$t->instituicao_id}}">
+                    <input type="hidden" name="escolaBiblioteca[{{$t->instituicao_id}}][]" value="{{$t->escola_id}}">
+                @endforeach
+            @endif
+        </form>
+    </section>
+
+    <script type="text/javascript" src="{{config('app.cdn')}}/fr/includes/js/slim_image_cropper/slim/slim.jquery.min.js"></script>
+    <link rel="stylesheet" href="{{config('app.cdn')}}/fr/includes/js/slim_image_cropper/slim/slim.css">
+
+    <script src="{{config('app.cdn')}}/fr/includes/js/slim-select/1.23.0/slimselect.min.js"></script>
+    <link href="{{config('app.cdn')}}/fr/includes/js/slim-select/1.23.0/slimselect.min.css" rel="stylesheet">
+
+    <script type="text/javascript">
+
+
+        ///////// seleciona instituicao e escola
+        $(document).ready(function(){
+            $('#tipo_permissao_biblioteca').change();
+
+            @if( ( (isset($dados->escolasBiblioteca) && $dados->escolasBiblioteca) || old('instituicaoBiblioteca') ))
+                if($('#tipo_permissao_biblioteca').val() ==4) {
+                    form = $('#formDadosBiblioteca input[type=hidden][name*="Biblioteca"]').serialize();
+                    form = form.split('Biblioteca').join('') + '&biblioteca=1';
+                    $.ajax({
+                        url: '{{url('gestao/agenda/familia/getInstituicaoSelecionadas')}}?' + form,
+                        type: 'post',
+                        dataType: 'json',
+                        data: {
+                            _token: '{{csrf_token()}}'
+                        },
+                        success: function (data) {
+                            $('#listaPermissaoBiblioteca').html(data);
+                        },
+                        error: function () {
+                            swal("", "Não foi possível carregar a lista de instituicoes selecionadas.", "error");
+                        }
+                    });
+                }
+            @endif
+
+        });
+
+
+
+        function mudaVisualizacaoBiblioteca(elemento) {
+            valor = $(elemento).val();
+            $('#btnEscolaTurmaBiblioteca').hide();
+            if(valor == 1){
+                $('#listaPermissaoBiblioteca').html('<li class="ui-state-default "><input type="hidden" name="instituicaoBiblioteca[]" value="0"><input type="hidden" name="tipo" value=""> <i class="fas fa-check"></i><span class="m-2"></span> Todas as instituições e escolas da rede.</li>');
+            }
+            else if(valor == 2){
+                $('#listaPermissaoBiblioteca').html('<li class="ui-state-default "><input type="hidden" name="instituicaoBiblioteca[]" value="0"><input type="hidden" name="tipo" value="publica"> <i class="fas fa-check"></i><span class="m-2"></span> Todas as instituições e escolas PÚBLICAS.</li>');
+            }
+            else if(valor == 3){
+                $('#listaPermissaoBiblioteca').html('<li class="ui-state-default "><input type="hidden" name="instituicaoBiblioteca[]" value="0"><input type="hidden" name="tipo" value="privada"> <i class="fas fa-check"></i><span class="m-2"></span> Todas as instituições e escolas PRIVADAS.</li>');
+            }
+            else{
+                $('#btnEscolaTurmaBiblioteca').show();
+                $('#listaPermissaoBiblioteca').html('');
+            }
+        }
+
+        $('#formEscolasTrumas').on('show.bs.modal', function () {
+            $('#buscaNome').val('');
+            ehProfessor = 1;
+            buscarEscolas('');
+        });
+
+        $(document).on('click', '.page-link', function(event){
+            event.preventDefault();
+            var page = $(this).attr('href').split('page=')[1];
+            buscarEscolas(page);
+        });
+
+        function buscarEscolas(page){
+            var form = '';
+                form = $('#formRoteiro input[type=hidden][name*="Biblioteca"]').serialize();
+                form = form.split('Biblioteca').join('') + '&biblioteca=1';
+            $.ajax({
+                url: '{{url('gestao/agenda/familia/getInstituicoesEscolas')}}?'+form,
+                type: 'post',
+                dataType: 'json',
+                data: {
+                    nome: $('#buscaNome').val(),
+                    nomeEscola: $('#buscaEscola').val(),
+                    tipo: $('#buscaTipo').val(),
+                    page: page,
+                    _token: '{{csrf_token()}}'
+                },
+                success: function(data) {
+                    $('#tabelaEscolasTurmas').html(data);
+                },
+                error: function() {
+                    swal("", "Não foi possível carregar a lista de escolas.", "error");
+                }
+            });
+        }
+
+        function adicionaInstituicao(instituicaoId, escolaId){
+            var quantidade = 0;
+            quantidade = $('#selecionadaInstituicaoBiblioteca'+instituicaoId).length;
+            if(quantidade == 0) {
+                    nomeInst = $('#nomeInstituicao' + instituicaoId).html();
+                    var add = '<li class="ui-state-default" id="selecionadaInstituicaoBiblioteca' + instituicaoId + '">';
+                    add += '<input type="hidden" name="instituicaoBiblioteca[]" value="' + instituicaoId + '">';
+                    add += '<b>' + nomeInst + '</b>';
+                    add += '<p id="listaEscolasSelecionadasInstituicaoBiblioteca' + instituicaoId + '"></p></li>';
+                    $('#listaPermissaoBiblioteca').append(add);
+            }
+            if(escolaId == -1) {
+                    $('#listaEscolasSelecionadasInstituicaoBiblioteca' + instituicaoId).html('<input type="hidden" name="escolaBiblioteca[' + instituicaoId + '][]" value="0"><span id="todasEscolasInstituicaoBiblioteca' + instituicaoId + '" class="badge badge-secondary">Todas as escolas selecionadas.</span>');
+            }
+            else {
+                if(quantidade != 0){
+                    $('#todasEscolasInstituicaoBiblioteca' + instituicaoId).remove();
+                }
+                nomeEscola = $('#nomeEscola' + escolaId).html();
+                $('#listaEscolasSelecionadasInstituicaoBiblioteca' + instituicaoId).append('<input type="hidden" name="escolaBiblioteca[' + instituicaoId + '][]" value="' + escolaId + '"><span class="badge badge-light ml-2" id="selecionadaEscolaBiblioteca' + escolaId + '">' + nomeEscola + '</span>');
+            }
+        }
+
+        var selectTipoPermissao;
+
+        var parametrosFroala = {
+            key: "{{config('app.froala')}}",
+            attribution: false, // to hide "Powered by Froala"
+            heightMin: 132,
+            buttonsVisible: 4,
+            placeholderText: '',
+            language: 'pt_br',
+            linkAlwaysBlank: true
+        }
+
+        $(document).ready(function(){
+
+            new FroalaEditor('#froala', parametrosFroala);
+
+            var selectEtapaAno = new SlimSelect({
+                select: '.multipleEtapa',
+                placeholder: 'Buscar',
+                searchPlaceholder: 'Buscar',
+                closeOnSelect: true,
+                allowDeselectOption: true,
+                selectByGroup: true,
+            });
+
+            var selectComponente = new SlimSelect({
+                select: '.multipleComponente',
+                placeholder: 'Buscar',
+                searchPlaceholder: 'Buscar',
+                closeOnSelect: true,
+                allowDeselectOption: true,
+                selectByGroup: true,
+            });
+
+            /* configuracoes basicas do plugin de recortar imagem */
+            var configuracao = {
+                ratio: '9:3',
+                crop: {
+                    x: 1920,
+                    y: 550,
+                    width: 1920,
+                    height: 550
+                },
+                download: false,
+                label: '<label>Insira uma Imagem</label> <i class="fas fa-file h5"></i> <br>Tamanho da imagem: 1920px X 550px ',
+                buttonConfirmLabel: 'Ok',
+            }
+
+            /* carrega o plugin de recortar imagem */
+            $(".myCropper").slim(configuracao);
+
+            trocaTipoPermissao()
+
+            @if(old('existeImg',@$dados->capa))
+                $('#logoCadastro').show();
+                $('#novaLogo').hide();
+            @else
+                $('#logoCadastro').hide();
+                $('#novaLogo').show();
+            @endif
+    });
+
+        function excluirLogo(){
+            $('#logoCadastro').remove();
+            $('#novaLogo').show();
+        }
+
+        function trocaTipoPermissao(){
+            if($('#permite_biblioteca').prop('checked')){
+                $('#divPermissionamento').show()
+                if(selectTipoPermissao.selected() == 2){
+                    $('#divPermissao').show();
+                }else{
+                    $('#divPermissao').hide();
+                }
+            }
+            else{
+                $('#divPermissionamento').hide();
+                $('#divPermissao').hide();
+            }
+
+        }
+
+  </script>
+
+
+@stop

@@ -1,0 +1,40 @@
+/* CSS exclusivo para as páginas de relatórios, não necessário incluir em outro lugar */
+.relat_lista{
+	padding: 0.5rem;
+	display: inline-block!important;
+	text-align: center;
+	min-width: 180px;
+	transition: transform .1s;
+	font-size: 13px;
+	font-weight: 600;
+}
+
+.relat_lista:hover{
+	transform: scale(1.05);
+}
+
+.relat_lista .fundo{
+	width: 59px;
+	height: 67px;
+	margin: 0 auto;
+	background: url("../../../includes/relatorios/imagens/fundos.png") left center no-repeat;
+}
+
+.relat_lista .bg_1 {background-position: 0 0;}
+.relat_lista .bg_2 {background-position: -59px 0;}
+.relat_lista .bg_3 {background-position: -118px 0;}
+.relat_lista .bg_4 {background-position: -177px 0;}
+.relat_lista .bg_5 {background-position: -236px 0;}
+.relat_lista .bg_6 {background-position: -295px 0;}
+.relat_lista .bg_7 {background-position: -354px 0;}
+.relat_lista .bg_8 {background-position: -413px 0;}
+.relat_lista .bg_9 {background-position: -472px 0;}
+.relat_lista .bg_10 {background-position: -531px 0;}
+
+.vsb-main button {
+	height: auto!important;
+}
+
+.card * {
+  transition: initial;
+}

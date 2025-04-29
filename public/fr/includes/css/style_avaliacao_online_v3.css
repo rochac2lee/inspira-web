@@ -1,0 +1,222 @@
+.avaliacao-online{
+  margin-top: 6em;
+}
+.avaliacao-online .pergunta{
+  font-size: 30px;
+  line-height: 38px;
+  font-weight: 500;
+  color: #3c3c3c;
+}
+
+.avaliacao-online .resposta{
+  font-size: 15px;
+  color: #3c3c3c;
+  font-weight: 500;
+}
+
+.avaliacao-online .card-option{
+  cursor: pointer;
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: .25rem;
+  text-align: center;
+  height: 100%;
+}
+
+.avaliacao-online .card-option:hover{
+  transition: 0.2s;
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.avaliacao-online .card-option img{
+  width: 300px;
+}
+
+.avaliacao-online .card-option.selected{
+  border: 1px solid #1cb0f5;
+  background-color: #ddf5ff;
+}
+
+.avaliacao-online .card-option.selected-correto{
+    border: 1px solid #28a745;
+    background-color: #d7fad8;
+}
+
+.avaliacao-online .avaliacao-footer {
+  margin-top: 4.5em;
+  border-top: 2px solid rgba(0,0,0,.125);
+  padding: 3em 0;
+}
+
+.avaliacao-footer-verificar button{
+  margin-top: 41px;
+}
+
+.avaliacao-footer-verificar {
+  height: 122px;
+  display: none;
+  margin-top: 4.5em;
+  border-top: 2px solid rgba(0,0,0,.125);
+}
+
+.avaliacao-footer-verificar.success {
+  display: block;
+  background-color: #d7fad8;
+  color: #28a745;
+}
+
+.avaliacao-footer-verificar.error {
+  display: block;
+  background-color: #fad7d7;
+  color: #a72828;
+}
+
+.avaliacao-footer-verificar.success .error{
+  display: none;
+}
+
+.avaliacao-footer-verificar.error .success{
+  display: none;
+}
+
+.avaliacao-footer-verificar.success label, .avaliacao-footer-verificar.error label {
+  position: absolute;
+  margin-top: 48px;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+/** avaliacao 2 **/
+.escreva{
+  font-size: 20px;
+  color: #007bff;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.discursiva {
+  width: 100%;
+}
+
+.discursiva .linhas {
+    border-bottom: 2px solid #dee2e6;
+    height: 48px;
+}
+
+.autocompletar button, .discursiva-resposta button{
+  margin: 5px 2px;
+}
+
+.discursiva-resposta {
+  position: absolute;
+}
+
+.letra{
+  cursor: pointer;
+}
+
+.discursiva textarea {
+  font-size: 18px;
+  width: 100%;
+  height: 160px;
+  padding: 10px;
+  line-height: 1.5;
+  border-radius: 5px;
+  border: 1px solid rgba(0,0,0,.125);
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.statsPerformace {
+  display: inline-block;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  background: #ffae00;
+  border-radius: 10px;
+}
+
+.statsPerformace .row {
+  margin: 0;
+  padding: 0;
+}
+
+.statsPerformace .row label{
+    font-size: 18px;
+    font-weight: 800;
+    width: 100%;
+}
+.statsPerformace .row .col {
+  margin: 0;
+  padding: 10px 5px 5px 5px;
+}
+.statsPerformace .row .col .a{
+  background-color: #c88800;
+  border-radius: 10px;
+  padding: 12px 0 12px 38px;
+  background:  #c88800 url("../../imagens/icones/avaliacao_ico_performance_1.png") no-repeat left center;
+  background-position: 8px;
+}
+.statsPerformace .row .col .a.a2{
+  background:  #c88800 url("../../imagens/icones/avaliacao_ico_performance_2.png") no-repeat left center;
+  background-position: 8px;
+}
+.statsPerformace .row .col .a.a3{
+  background:  #c88800 url("../../imagens/icones/avaliacao_ico_performance_3.png") no-repeat left center;
+  background-position: 8px;
+}
+.statsPerformace .row .col .a.a4{
+  background:  #c88800 url("../../imagens/icones/avaliacao_ico_performance_4.png") no-repeat left center;
+  background-position: 8px;
+}
+.statsPerformace .row .col .a.a5{
+  background:  #c88800 url("../../imagens/icones/avaliacao_ico_performance_5.png") no-repeat left center;
+  background-position: 8px;
+}
+
+.card-header.certo {
+  background-color: #28a745!important;
+  color: #ffffff;
+  font-size: 12px;
+  line-height: normal;
+}
+.card-header.errado {
+  background-color: #dc3545!important;
+  color: #ffffff;
+  font-size: 12px;
+  line-height: normal;
+}
+
+@media (max-width: 940px) {
+  .col-md-6.pl-5{
+    padding: 0!important;
+  }
+
+  .questao {
+    padding: 1em;
+  }
+}
+.letraQuestaoAberta {
+    border: 1px solid;
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    margin: 0 5px 0 0;
+    float: left;
+}
+.corretaAlternativa{
+    background-color: #a8f986;
+}
+
+.marcadaAlternativa{
+    background-color: #ddf5ff;
+}

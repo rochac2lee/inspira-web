@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Primary Meta Tags -->
+    <title>Tabela Periódica</title>
+    <meta name="title" content="Tabela Periódica - Inspira">
+    <meta name="description" content="Tabela periódica interativa e educativa para aprendizado - Inspira - Editora Opet">
+    <meta name="keywords" content="tabela periodica, inspira, opet, elementos">
+    <meta name="author" content="Wagner D`Albuquerque Viana">
+    <meta name="robots" content="instruções para os mecanismos de busca, como indexar, seguir, etc.">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://opetinspira.com.br/tabelaperiodica">
+    <meta property="og:title" content="Tabela Periódica - Inspira">
+    <meta property="og:description" content="Tabela periódica interativa e educativa para aprendizado - Inspira - Editora Opet"> 
+
+    <!-- Twitter -->    
+    <meta property="twitter:url" content="https://opetinspira.com.br/tabelaperiodica">
+    <meta property="twitter:title" content="Tabela Periódica - Inspira">
+    <meta property="twitter:description" content="Tabela periódica interativa e educativa para aprendizado - Inspira - Editora Opet">    
+     
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="json/manifest.json">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link href='vendor/boxicons-2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>  
+
+    <div class="content">  
+        <div class="menu"> 
+            <div class="logo-opet">
+                <a href="https://opetinspira.com.br/catalogo" rel="Págia Inicial Opet Inspira" alt="Págia Inicial Opet Inspira" title="Opet Inspira"><img src="logo/logo-inspira-branco-01.svg" alt="Logo Opet Em Branco" srcset=""></a>
+            </div> 
+            <h4>Grupos</h4>
+            <a href="javascript:void(0)" id="hydrogen-menu"><i class='bx bx-play'></i>Hidrogênio</a>
+            <a href="javascript:void(0)" id="alkali-menu"><i class='bx bx-play'></i>Metais Alcalinos</a>            
+            <a href="javascript:void(0)" id="alkaline-menu"><i class='bx bx-play'></i>Metais Alcalinoterrosos</a>
+            <a href="javascript:void(0)" id="transition-metal-menu"><i class='bx bx-play'></i>Metais de Transição</a>
+            <a href="javascript:void(0)" id="boron-menu"><i class='bx bx-play'></i>Grupo Boro</a>
+            <a href="javascript:void(0)" id="carbon-menu"><i class='bx bx-play'></i>Grupo Carbono</a>
+            <a href="javascript:void(0)" id="nitrogen-menu"><i class='bx bx-play'></i>Grupo Nitrogênio</a>
+            <a href="javascript:void(0)" id="calogens-menu"><i class='bx bx-play'></i>Calcogênios</a>
+            <a href="javascript:void(0)" id="halogen-menu"><i class='bx bx-play'></i>Halogênios</a>
+            <a href="javascript:void(0)" id="noble-gases-menu"><i class='bx bx-play'></i>Gases Nobres</a>
+            <a href="javascript:void(0)" id="lanthanide-menu"><i class='bx bx-play'></i>Lantanídeos</a>
+            <a href="javascript:void(0)" id="actinide-menu"><i class='bx bx-play'></i>Actinídeos</a>   
+            <h4>Classificação</h4>    
+            <a href="javascript:void(0)" id="metals-menu"><i class='bx bx-play'></i>Metais</a>             
+            <a href="javascript:void(0)" id="nonmetals-menu"><i class='bx bx-play'></i>Ametais</a> 
+            <h4>Curiosidades</h4>    
+            <a href="javascript:void(0)" id="origin-elements-menu"><i class='bx bxs-movie-play'></i>Qual é a origem dos elementos químicos</a>
+            <a href="javascript:void(0)" id="tecnologi-elements-menu"><i class='bx bxs-movie-play'></i>Elementos químicos e tecnologia ao longo do tempo</a>   
+            <a href="javascript:void(0)" id="table-what-for-menu"><i class='bx bxs-movie-play'></i>Tabela Periódica: Para que serve, afinal?</a>    
+            <br>    
+        </div>
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+                <div class="vw-plugin-top-wrapper"></div>
+            </div>
+        </div>
+        <i class='close-menu bx bx-horizontal-left'></i>  
+        <div class="modal-audio">
+            <div class="close-modal-audio">
+                <i class='bx bxs-x-circle'></i>
+            </div>
+            <div id="player-audio">                
+                <div id="loading-icon-audio">
+                    <i class='bx bx-loader-circle bx-spin'></i>
+                </div>
+            </div>        
+        </div>    
+        <ol class="periodic-table">
+            <li id="group-1" class="groups-periods">1</li>
+            <li id="group-2" class="groups-periods">2</li>
+            <li id="group-3" class="groups-periods">3</li>
+            <li id="group-4" class="groups-periods">4</li>
+            <li id="group-5" class="groups-periods">5</li>
+            <li id="group-6" class="groups-periods">6</li>
+            <li id="group-7" class="groups-periods">7</li>
+            <li id="group-8" class="groups-periods">8</li>
+            <li id="group-9" class="groups-periods">9</li>
+            <li id="group-10" class="groups-periods">10</li>
+            <li id="group-11" class="groups-periods">11</li>
+            <li id="group-12" class="groups-periods">12</li>
+            <li id="group-13" class="groups-periods">13</li>
+            <li id="group-14" class="groups-periods">14</li>
+            <li id="group-15" class="groups-periods">15</li>
+            <li id="group-16" class="groups-periods">16</li>
+            <li id="group-17" class="groups-periods">17</li>
+            <li id="group-18" class="groups-periods">18</li>
+            <li id="period-1" class="groups-periods">1</li>
+            <li id="hydrogen" class="group-nonmetals hydrogen period-1 element"></li>
+            <li id="helium" class="group-nonmetals group-18 period-1 element"></li>
+            <li id="period-2" class="groups-periods">2</li>
+            <li id="lithium" class="group-metals group-1 period-2 element"></li>
+            <li id="beryllium" class="group-metals group-2 period-2 element"></li>
+            <li id="boron" class="group-nonmetals group-metals group-13 period-2 element"></li>
+            <li id="carbon" class="group-nonmetals group-14 period-2 element"></li>
+            <li id="nitrogen" class="group-nonmetals group-15 period-2 element"></li>
+            <li id="oxygen" class="group-nonmetals group-16 period-2 element"></li>
+            <li id="fluorine" class="group-nonmetals group-17 period-2 element"></li>
+            <li id="neon" class="group-nonmetals group-18 period-2 element"></li>
+            <li id="period-3" class="groups-periods">3</li>
+            <li id="sodium" class="group-metals group-1 period-3 element"></li>
+            <li id="magnesium" class="group-metals group-2 period-3 element"></li>
+            <li id="aluminum" class="group-metals group-13 period-3 element"></li>
+            <li id="silicon" class="group-nonmetals group-metals group-14 period-3 element"></li>
+            <li id="phosphorus" class="group-nonmetals group-15 period-3 element"></li>
+            <li id="sulfur" class="group-nonmetals group-16 period-3 element"></li>
+            <li id="chlorine" class="group-nonmetals group-17 period-3 element"></li>
+            <li id="argon" class="group-nonmetals group-18 period-3 element"></li>            
+            <li id="period-4" class="groups-periods">4</li>
+            <li id="potassium" class="group-metals group-1 period-4 element"></li>
+            <li id="calcium"  class="group-metals group-2 period-4 element"></li>
+            <li id="scandium" class="group-metals group-transition-metal group-3 period-4 element"></li>
+            <li id="titanium" class="group-metals group-transition-metal group-4 period-4 element"></li>
+            <li id="vanadium" class="group-metals group-transition-metal group-5 period-4 element"></li>
+            <li id="chromium" class="group-metals group-transition-metal group-6 period-4 element"></li>
+            <li id="manganese" class="group-metals group-transition-metal group-7 period-4 element"></li>
+            <li id="iron" class="group-metals group-transition-metal group-8 period-4 element"></li>
+            <li id="cobalt" class="group-metals group-transition-metal group-9 period-4 element"></li>
+            <li id="nickel" class="group-metals group-transition-metal group-10 period-4 element"></li>
+            <li id="copper" class="group-metals group-transition-metal group-11 period-4 element"></li>
+            <li id="zinc" class="group-metals group-transition-metal group-12 period-4 element"></li>
+            <li id="gallium" class="group-metals group-13 period-4 element"></li>
+            <li id="germanium" class="group-nonmetals group-metals group-14 period-4 element"></li>
+            <li id="arsenic" class="group-nonmetals group-metals group-15 period-4 element"></li>
+            <li id="selenium" class="group-nonmetals group-16 period-4 element"></li>
+            <li id="bromine" class="group-nonmetals group-17 period-4 element"></li>
+            <li id="krypton" class="group-nonmetals group-18 period-4 element"></li>
+            <li id="period-5" class="groups-periods">5</li>
+            <li id="rubidium" class="group-metals group-1 period-5 element"></li>
+            <li id="strontium" class="group-metals group-2 period-5 element"></li>
+            <li id="yttrium" class="group-metals group-transition-metal group-3 period-5 element"></li>
+            <li id="zirconium" class="group-metals group-transition-metal group-4 period-5 element"></li>
+            <li id="niobium" class="group-metals group-transition-metal group-5 period-5 element"></li>
+            <li id="molybdenum" class="group-metals group-transition-metal group-6 period-5 element"></li>
+            <li id="technetium" class="group-metals group-transition-metal group-7 period-5 element"></li>
+            <li id="ruthenium" class="group-metals group-transition-metal group-8 period-5 element"></li>
+            <li id="rhodium" class="group-metals group-transition-metal group-9 period-5 element"></li>
+            <li id="palladium" class="group-metals group-transition-metal group-10 period-5 element"></li>
+            <li id="silver" class="group-metals group-transition-metal group-11 period-5 element"></li>
+            <li id="cadmium" class="group-metals group-transition-metal group-12 period-5 element"></li>
+            <li id="indium" class="group-metals group-13 period-5 element"></li>
+            <li id="tin" class="group-metals group-14 period-5 element"></li>
+            <li id="antimony" class="group-nonmetals group-metals group-15 period-5 element"></li>
+            <li id="tellurium" class="group-nonmetals group-metals group-16 period-5 element"></li>
+            <li id="iodine" class="group-nonmetals group-17 period-5 element"></li>
+            <li id="xenon" class="group-nonmetals group-18 period-5 element"></li>
+            <li id="period-6" class="groups-periods">6</li>
+            <li id="cesium" class="group-metals group-1 period-6 element"></li>
+            <li id="barium" class="group-metals group-2 period-6 element"></li>
+            <li class="group-metals lanthanide element prevent">57 - 71</li>
+            <li id="hafnium" class="group-metals group-transition-metal group-4 period-6 element"></li>
+            <li id="tantalum" class="group-metals group-transition-metal group-5 period-6 element"></li>
+            <li id="tungsten" class="group-metals group-transition-metal group-6 period-6 element"></li>
+            <li id="rhenium" class="group-metals group-transition-metal group-7 period-6 element"></li>
+            <li id="osmium" class="group-metals group-transition-metal group-8 period-6 element"></li>
+            <li id="iridium" class="group-metals group-transition-metal group-9 period-6 element"></li>
+            <li id="platinum" class="group-metals group-transition-metal group-10 period-6 element"></li>
+            <li id="gold" class="group-metals group-transition-metal group-11 period-6 element"></li>
+            <li id="mercury" class="group-metals group-transition-metal group-12 period-6 element"></li>
+            <li id="thallium" class="group-metals group-13 period-6 element"></li>
+            <li id="lead" class="group-metals group-14 period-6 element"></li>
+            <li id="bismuth" class="group-metals group-15 period-6 element"></li>
+            <li id="polonium" class="group-metals group-16 period-6 element"></li>
+            <li id="astatine" class="group-nonmetals group-17 period-6 element"></li>
+            <li id="radon" class="group-nonmetals group-18 period-6 element"></li>
+            <li id="period-7" class="groups-periods">7</li>
+            <li id="francium" class="group-metals group-1 period-7 element"></li>
+            <li id="radium" class="group-metals group-2 period-7 element"></li>
+            <li class="group-metals actinide element prevent">89 - 103</li>
+            <li id="rutherfordium" class="group-metals group-transition-metal group-4 period-7 element"></li>
+            <li id="dubnium" class="group-metals group-transition-metal group-5 period-7 element"></li>
+            <li id="seaborgium" class="group-metals group-transition-metal group-6 period-7 element"></li>
+            <li id="bohrium" class="group-metals group-transition-metal group-7 period-7 element"></li>
+            <li id="hassium" class="group-metals group-transition-metal group-8 period-7 element"></li>
+            <li id="meitnerium" class="group-metals group-transition-metal group-9 period-7 element"></li>
+            <li id="darmstadtium" class="group-metals group-transition-metal group-10 period-7 element"></li>
+            <li id="roentgenium" class="group-metals group-transition-metal group-11 period-7 element"></li>
+            <li id="copernicium" class="group-metals group-transition-metal group-12 period-7 element"></li>
+            <li id="nihonium" class="group-13 period-7 element"></li>
+            <li id="flerovium" class="group-14 period-7 element"></li>
+            <li id="moscovium" class="group-15 period-7 element"></li>
+            <li id="livermorium" class="group-16 period-7 element"></li>
+            <li id="tennessine" class="group-17 period-7 element"></li>
+            <li id="oganesson" class="group-18 period-7 element"></li>
+            <li id="lanthanide-start"  class="groups-periods">6</li>
+            <li id="lanthanum" class="group-metals element"></li>
+            <li id="cerium" class="group-metals element"></li>
+            <li id="praseodymium" class="group-metals element"></li>
+            <li id="neodymium" class="group-metals element"></li>
+            <li id="promethium" class="group-metals element"></li>
+            <li id="samarium" class="group-metals element"></li>
+            <li id="europium" class="group-metals element"></li>
+            <li id="gadolinium" class="group-metals element"></li>
+            <li id="terbium" class="group-metals element"></li>
+            <li id="dysprosium" class="group-metals element"></li>
+            <li id="holmium" class="group-metals element"></li>
+            <li id="erbium" class="group-metals element"></li>
+            <li id="thulium" class="group-metals element"></li>
+            <li id="ytterbium" class="group-metals element"></li>     
+            <li id="lutetium" class="group-metals element"></li>                 
+            <li id="actinide-start"  class="groups-periods">7</li>
+            <li id="actinium" class="group-metals element"></li>
+            <li id="thorium" class="group-metals element"></li>
+            <li id="protactinium" class="group-metals element"></li>
+            <li id="uranium" class="group-metals element"></li>
+            <li id="neptunium" class="group-metals element"></li>
+            <li id="plutonium" class="group-metals element"></li>
+            <li id="americium" class="group-metals element"></li>
+            <li id="curium" class="group-metals element"></li>
+            <li id="berkelium" class="group-metals element"></li>
+            <li id="californium" class="group-metals element"></li>
+            <li id="einsteinium" class="group-metals element"></li>
+            <li id="fermium" class="group-metals element"></li>
+            <li id="mendelevium" class="group-metals element"></li>
+            <li id="nobelium" class="group-metals element"></li>
+            <li id="lawrencium" class="group-metals element"></li>                                    
+        </ol> 
+        <div class="modal-element">
+            <div class="close-modal-element">
+                <i class='bx bxs-x-circle'></i>
+            </div>
+            <div class="content-element">            
+            </div>
+        </div>     
+        <div class="modal-video">
+            <div class="content-video">
+                <div class="close-modal-video">
+                    <i class='bx bxs-x-circle'></i>
+                </div>
+                <div id="player-video">                
+                    <div id="loading-icon-video">
+                        <i class='bx bx-loader-circle bx-spin'></i>
+                    </div>
+                </div> 
+            </div> 
+        </div>
+        <a href="https://vimeo.com/842822822/b1ca84ccd0" target="_blank"><img src="images/inspira_mascote_opet.png"  alt="Link para tutorial da tabela periodica" class="mascot-inspira"></a>
+    </div> 
+      
+      
+ <!-- Acessibilidade em Libras -->
+ <script src="{{config('app.cdn')}}/fr/includes/js/vlibras/vlibras-plugin.min.js"></script>
+ <script>
+     new window.VLibras.Widget('https://vlibras.gov.br/app');
+ </script>
+<script src="https://player.vimeo.com/api/player.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/flipbook.style.css">
+<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+
+<script src="js/flipbook.min.js"></script>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $("#container").flipBook({
+            pages:[
+            {src:"livro/1.jpg", thumb:"livro/1.jpg", title:"Página 1"},
+            {src:"livro/2.jpg", thumb:"livro/2.jpg", title:"Página 2"},
+            {src:"livro/3.jpg", thumb:"livro/3.jpg", title:"Página 3"},
+            {src:"livro/4.jpg", thumb:"livro/4.jpg", title:"Página 4"},
+            {src:"livro/5.jpg", thumb:"livro/5.jpg", title:"Página 5"},
+            {src:"livro/6.jpg", thumb:"livro/6.jpg", title:"Página 6"},
+            {src:"livro/7.jpg", thumb:"livro/7.jpg", title:"Página 7"},
+            {src:"livro/8.jpg", thumb:"livro/8.jpg", title:"Página 8"},
+            {src:"livro/9.jpg", thumb:"livro/9.jpg", title:"Página 9"},
+            {src:"livro/10.jpg", thumb:"livro/10.jpg", title:"Página 10"},
+            {src:"livro/11.jpg", thumb:"livro/11.jpg", title:"Página 11"},
+            {src:"livro/12.jpg", thumb:"livro/12.jpg", title:"Página 12"},
+            {src:"livro/13.jpg", thumb:"livro/13.jpg", title:"Página 13"},
+            {src:"livro/14.jpg", thumb:"livro/14.jpg", title:"Página 14"},
+            {src:"livro/15.jpg", thumb:"livro/15.jpg", title:"Página 15"},
+            {src:"livro/16.jpg", thumb:"livro/16.jpg", title:"Página 16"},
+            {src:"livro/17.jpg", thumb:"livro/17.jpg", title:"Página 17"},
+            {src:"livro/18.jpg", thumb:"livro/18.jpg", title:"Página 18"},
+            {src:"livro/19.jpg", thumb:"livro/19.jpg", title:"Página 19"},
+            {src:"livro/20.jpg", thumb:"livro/20.jpg", title:"Página 20"},
+            {src:"livro/21.jpg", thumb:"livro/21.jpg", title:"Página 21"},
+            {src:"livro/22.jpg", thumb:"livro/22.jpg", title:"Página 22"},
+            {src:"livro/23.jpg", thumb:"livro/23.jpg", title:"Página 23"},
+            {src:"livro/24.jpg", thumb:"livro/24.jpg", title:"Página 24"},
+            {src:"livro/25.jpg", thumb:"livro/25.jpg", title:"Página 25"},
+            {src:"livro/26.jpg", thumb:"livro/26.jpg", title:"Página 26"},
+            {src:"livro/27.jpg", thumb:"livro/27.jpg", title:"Página 27"},
+            {src:"livro/28.jpg", thumb:"livro/28.jpg", title:"Página 28"},
+            {src:"livro/29.jpg", thumb:"livro/29.jpg", title:"Página 29"},
+            {src:"livro/30.jpg", thumb:"livro/30.jpg", title:"Página 30"},
+            {src:"livro/31.jpg", thumb:"livro/31.jpg", title:"Página 31"},
+            {src:"livro/32.jpg", thumb:"livro/32.jpg", title:"Página 32"},
+            {src:"livro/33.jpg", thumb:"livro/33.jpg", title:"Página 33"},
+            {src:"livro/34.jpg", thumb:"livro/34.jpg", title:"Página 34"},
+            {src:"livro/35.jpg", thumb:"livro/35.jpg", title:"Página 35"},
+            {src:"livro/36.jpg", thumb:"livro/36.jpg", title:"Página 36"},
+            {src:"livro/37.jpg", thumb:"livro/37.jpg", title:"Página 37"},
+            {src:"livro/38.jpg", thumb:"livro/38.jpg", title:"Página 38"},
+            {src:"livro/39.jpg", thumb:"livro/39.jpg", title:"Página 39"}
+            ],
+                  btnZoomIn : {enabled:true},
+                  btnZoomOut : {enabled:true},
+                  btnToc : {enabled:false},
+                  btnBookmark : {enabled:false},
+                  btnShare : {enabled:false},
+                  btnDownloadPages : {enabled:false},
+                  btnDownloadPdf : {enabled:false},
+                  btnSound : {enabled:false},
+                  btnPrint : {enabled:false},
+
+            //viewMode:'3d',
+
+            skin:'dark',
+            sound: false,
+
+            menuMargin:10,
+            menuBackground:'none',
+            //menuShadow:'none',
+            menuAlignHorizontal:'right',
+            //menuOverBook:true,
+
+            btnRadius:40,
+            btnMargin:4,
+            btnSize:14,
+            btnPaddingV:16,
+            btnPaddingH:16,
+            btnBorder:'2px solid rgba(255,255,255,.7)',
+            btnBackground:"rgba(0,0,0,.3)",
+            btnColor:'rgb(255,120,60)',
+
+           // sideBtnRadius:60,
+            sideBtnSize:60,
+            sideBtnBackground:"rgba(0,0,0,.7)",
+            sideBtnColor:'rgb(255,120,60)',
+            backgroundColor:"#666",
+
+            strings: {
+
+                search: "Busca",
+                findInDocument: "Encontrar no documento",
+                pagesFoundContaining: "'paginas encontradas contendo",
+
+                thumbnails: "Páginas",
+                tableOfContent: "Tabela de Conteúdos",
+                pages: "Páginas",
+
+                pressEscToClose:"ESC para fechar"
+
+
+            },
+            
+        });
+    })
+</script>
+
+</head>
+
+<body>
+<div id="container"/>
+</body>
+
+</html>
