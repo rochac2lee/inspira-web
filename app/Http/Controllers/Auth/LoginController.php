@@ -64,7 +64,7 @@ class LoginController extends Controller
     protected function validateLogin(Request $request)
     {
         $validacao = [
-            'email' => 'required|email',
+            'email' => ['required', 'email', new LoginComInstituicaoAtiva, new LoginUsuarioAtivo],
             'password' => 'required|min:6',
         ];
         Log::info('Validando login', ['request' => $request->all()]);
