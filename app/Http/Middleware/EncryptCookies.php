@@ -1,21 +1,11 @@
 
 <?php
-
 namespace App\Http\Middleware;
 
 use Illuminate\Cookie\Middleware\EncryptCookies as Middleware;
 
 class EncryptCookies extends Middleware
 {
-    /**
-     * The names of the cookies that should not be encrypted.
-     *
-     * @var array
-     */
-    protected $except = [
-        //
-    ];
-
     /**
      * Disable encryption for specific routes/cookies if needed
      *
@@ -26,4 +16,13 @@ class EncryptCookies extends Middleware
     {
         return parent::disable($request);
     }
+
+    /**
+     * The names of the cookies that should not be encrypted.
+     *
+     * @var array
+     */
+    protected $except = [
+        //
+    ];
 }
